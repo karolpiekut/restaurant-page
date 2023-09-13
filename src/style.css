@@ -1,7 +1,265 @@
- body {
-    font-family: Roboto, Helveticam, sans-serif;
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
- .header {
-     text-align: center;
- }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: black;
+}
+
+header {
+    height: 19vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+nav {
+    height: 5vh;
+}
+
+main {
+    background: #202020;
+    height: 80vh;
+}
+
+#index-main {
+    background-position: center;
+    background-image: url("./img/dough-hands.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#coffee-main {
+    background-position: center;
+    background-image: url("./img/coffee.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#book-main {
+    background-position: center;
+    background-image: url("./img/bread-display.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+footer {
+    color: white;
+    background: black;
+    height: 25px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+h1, h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#navigation-items {
+    color: white;
+    margin: 0 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10vw; /*150px*/
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+li, a {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 25px;
+}
+
+a:hover {
+    background: rgba(255, 0, 0, 0.7);
+}
+
+#index-main, #coffee-main, #menu-main, #book-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.message {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.7);
+    width: 50vw;
+    font-size: 25px;
+    text-align: center;
+    color: #333333;
+}
+
+#logo {
+    margin: 20px auto 0 auto;
+    display: block;
+    max-width: 25vw; /*500px;*/
+    max-height: 13vh;/*210px;*/
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+#book-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.small {
+    font-size: 15px;
+}
+
+.form-label {
+    font-size: 2.5vh;
+}
+
+#guest-name, #guest-phone, #date, #guests-number, #book-button {
+    width: 15vw;
+    height: 3vh;
+}
+
+#form-row-one, #form-row-two {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
+
+#special-requests {
+    width: 31vw;
+    height: 7vh;
+}
+
+#food-menu {
+    margin: 10px 0 10px 0;
+    color: #333333;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    gap: 10px;
+}
+
+#column1-menu, #column2-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.food-menu-item {
+    width: 290px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid rgba(255, 255, 255, 0.7) 1px;
+}
+
+h4 {
+    color: black;
+    background: rgba(255, 255, 255, 0.7);
+    height: 30px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#avocado-bagel {
+    background-position: center;
+    background-image: url("./img/menu-img/avocado-bagel.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#beef-bagel {
+    background-position: center;
+    background-image: url("./img/menu-img/beef-bagel.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#baguette-sandwich {
+    background-position: center;
+    background-image: url("./img/menu-img/baguette-sandwich.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#omelette {
+    background-position: center;
+    background-image: url("./img/menu-img/omelette.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#salmon-slice {
+    background-position: center;
+    background-image: url("./img/menu-img/salmon-slice.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#full-breakfast {
+    background-position: center;
+    background-image: url("./img/menu-img/full-breakfast.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#pastrami-sandwich {
+    background-position: center;
+    background-image: url("./img/menu-img/pastrami-sandwich.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#sourdough-sandwich {
+    background-position: center;
+    background-image: url("./img/menu-img/sourdough-sandwich.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
