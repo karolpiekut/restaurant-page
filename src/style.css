@@ -1,3 +1,4 @@
+
 html, body {
     margin: 0;
     padding: 0;
@@ -27,9 +28,19 @@ nav {
     height: 5vh;
 }
 
-main {
+#content #content2 {
     background: #202020;
     height: 80vh;
+    display: flex;
+}
+
+#content2 {
+    background: #202020;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #index-main {
@@ -37,6 +48,7 @@ main {
     background-image: url("./img/dough-hands.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+    height: 80vh;
 }
 
 #coffee-main {
@@ -44,6 +56,7 @@ main {
     background-image: url("./img/coffee.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+    height: 80vh;
 }
 
 #book-main {
@@ -51,6 +64,7 @@ main {
     background-image: url("./img/bread-display.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+    height: 80vh;
 }
 
 footer {

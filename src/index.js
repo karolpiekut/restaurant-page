@@ -32,6 +32,7 @@ function header() {
     return header
 }
 
+
 function footer() {
     const footer = document.createElement('footer');
     footer.innerHTML = `<p>© Charles Baker 2023</p>`;
@@ -39,7 +40,7 @@ function footer() {
 }
 
 function index() {
-    const index = document.createElement('main');
+    const index = document.createElement('div');
     const indexDiv = document.createElement('div');
     index.setAttribute('id', 'index-main');
     indexDiv.setAttribute('class', 'message');
@@ -49,8 +50,9 @@ function index() {
     return index;
 }
 
+
 function coffee() {
-    const coffee = document.createElement('main');
+    const coffee = document.createElement('div');
     const coffeeDiv = document.createElement('div');
     coffee.setAttribute('id', 'coffee-main');
     coffeeDiv.setAttribute('class', 'message');
@@ -64,16 +66,90 @@ function coffee() {
     return coffee;
 }
 
+function bookTable() {
+    const bookTable = document.createElement('div');
+    const bookTableDiv = document.createElement('div');
+    bookTable.setAttribute('id', 'book-main');
+    bookTableDiv.setAttribute('class', 'message');
+    bookTable.appendChild(bookTableDiv);
+    bookTableDiv.innerHTML = `<form id="book-form">
+            <h2>Book a table</h2>
+            <div id="form-row-one">
+                <div class="form-field" id="guest-name-form">
+                    <label class="form-label" for="guest-name">Name:</label>
+                    <input type="text" id="guest-name" name="guest-name">
+                </div>
+                <div class="form-field" id="guest-phone-form">
+                    <label class="form-label" for="guest-phone">Phone number:</label>
+                    <input type="tel" id="guest-phone" name="guest-phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    <small class="small">Format: 123-456-7890</small>
+                </div>
+            </div>
+            <div id="form-row-two">
+                <div class="form-field" id="date-form">
+                    <label class="form-label" for="date">Date:</label>
+                    <input type="date" id="date" name="booking-date" value="2018-07-22" min="2018-01-01"
+                           max="2018-12-31"/>
+                </div>
+                <div class="form-field" id="guests-form">
+                    <label class="form-label" for="guests-number">Number of guests:</label>
+                    <select id="guests-number" name="guests-number">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                        <option value="1">6</option>
+                        <option value="1">7</option>
+                        <option value="1">8</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-field" id="text-form">
+                <label class="form-label" for="special-requests">Special requests:</label>
+                <input type="text" id="special-requests" maxlength="250">
+            </div>
+            <input id="book-button" type="submit" value="Book">
+        </form>`
+    return bookTable;
+}
 
+
+function menu() {
+    const menu = document.createElement('div');
+    const menuDiv = document.createElement('div');
+    menu.setAttribute('id', 'menu-main');
+    menuDiv.setAttribute('id', 'food-menu');
+    menu.appendChild(menuDiv);
+    menuDiv.innerHTML = `<div id="column1-menu">
+            <div class="food-menu-item" id="avocado-bagel"><h4>Avocado Bagel</h4></div>
+            <div class="food-menu-item" id="baguette-sandwich"><h4>Baguette Sandwich</h4></div>
+            <div class="food-menu-item" id="beef-bagel"><h4>Beef Bagel</h4></div>
+            <div class="food-menu-item" id="omelette"><h4>Omelette</h4></div>
+        </div>
+        <div id="column2-menu">
+            <div class="food-menu-item" id="salmon-slice"><h4>Salmon Slice</h4></div>
+            <div class="food-menu-item" id="full-breakfast"><h4>Full Breakfast</h4></div>
+            <div class="food-menu-item" id="pastrami-sandwich"><h4>Pastrami Sandwich</h4></div>
+            <div class="food-menu-item" id="sourdough-sandwich"><h4>Sourdough Sandwich</h4></div>
+        </div>
+    </div>`;
+    return menu;
+}
+
+function content() {
+    const content = document.createElement('div');
+    content.setAttribute('id', 'content');
+    content.appendChild(index());
+    return content;
+}
 
 
 document.body.appendChild(header());
-document.body.appendChild(index());
+document.body.appendChild(content());
+//document.body.appendChild(index());
 document.body.appendChild(footer());
 
-let test1 = document.getElementById('content');
-console.log(`test1: ${test1}`);
-let test2 = document.querySelector('#content');
-console.log(`test2: ${test2}`);
+
 
 
