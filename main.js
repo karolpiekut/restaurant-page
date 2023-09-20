@@ -431,7 +431,11 @@ eval("module.exports = __webpack_require__.p + \"2dad036e72b1f8a453dc.jpg\";\n\n
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	__webpack_require__("./src/index.js");
+/******/ 	__webpack_require__("./src/bakery.js");
+/******/ 	__webpack_require__("./src/menu.js");
+/******/ 	__webpack_require__("./src/book.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/coffee.js");
 /******/ 	
 /******/ })()
 ;
