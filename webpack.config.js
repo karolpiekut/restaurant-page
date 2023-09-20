@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: ['./src/index.js', './src/bakery.js', './src/menu.js', './src/book.js', './src/coffee.js'],
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
@@ -21,3 +21,6 @@ module.exports = {
     },
 
 };
+
+
+
