@@ -2,6 +2,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    max-height: 100%;
 }
 
 * {
@@ -21,29 +22,26 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 nav {
     height: 5vh;
 }
 
-#content #content2 {
+#content, #content2 {
     background: #202020;
-    height: 80vh;
-    display: flex;
+    height: 80vh
 }
 
 #content2 {
-    background: #202020;
-    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-#index-main {
+#bakery-main {
     background-position: center;
     background-image: url("./img/dough-hands.jpg");
     background-repeat: no-repeat;
@@ -70,9 +68,9 @@ nav {
 footer {
     color: white;
     background: black;
-    height: 25px;
+    height: 1vh;
     text-align: center;
-    margin-top: 5px;
+    padding-top: 5px;
 }
 
 h1 {
@@ -101,27 +99,26 @@ h1, h2 {
     justify-content: center;
 }
 
-a {
+button {
     width: 100px;
-    height: 50px;
+    height: 40px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-color: black;
+    border: none;
 }
 
-li, a {
+li, button {
     color: white;
     text-decoration: none;
     list-style-type: none;
     font-size: 25px;
 }
 
-a:hover {
+button:hover {
     background: rgba(255, 0, 0, 0.7);
 }
 
-#index-main, #coffee-main, #menu-main, #book-main {
+#bakery-main, #coffee-main, #menu-main, #book-main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -204,8 +201,8 @@ p {
 }
 
 .food-menu-item {
-    width: 290px;
-    height: 170px;
+    width: 20vw; /*290px;*/
+    height: 18vh; /*170px;*/
     display: flex;
     flex-direction: column;
     align-items: center;
