@@ -5,6 +5,19 @@ import menu from './menu.js';
 import bookTable from './book.js';
 import coffee from './coffee.js';
 
+function webController(par2) {
+    const content = document.getElementById("content");
+    console.log(content.firstChild);
+    content.firstChild.replaceWith(par2);
+    //document.body.appendChild(content(par2));
+}
+
+window.menu = menu;
+window.bakery = bakery;
+window.bookTable = bookTable;
+window.coffee = coffee;
+window.webController = webController;
+
 function header() {
     const header = document.createElement('header')
     const logo = new Image();
@@ -14,10 +27,10 @@ logo.setAttribute('alt', 'charles-baker-logo');
 header.innerHTML = `
     <nav id="navigation">
         <ul id="navigation-items">
-            <li><button id="index-button">Bakery</button></li>
-            <li><button id="menu-button">Menu</a></li>
-            <li><button id="coffee-button">Coffee</a></li>
-            <li><button id="book-button">Book</a></li>
+            <li><button id="index-button" onclick="webController(bakery())">Bakery</button></li>
+            <li><button id="menu-button" onclick="webController(menu())">Menu</a></li>
+            <li><button id="coffee-button" onclick="webController(coffee())">Coffee</a></li>
+            <li><button id="book-button" onclick="webController(bookTable())">Book</a></li>
         </ul>
     </nav>`;
 header.insertBefore(logo, header.firstChild);
@@ -37,18 +50,9 @@ function footer() {
     return footer;
 }
 
-function webController(par2) {
-    document.body.appendChild(header());
-    document.body.appendChild(content(par2));
-    document.body.appendChild(footer());
-}
-
-webController(menu());
-
-//document.getElementById('index-button').addEventListener('click', webController(index()));
-//document.getElementById('menu-button').addEventListener('click', webController(menu()));
-//document.getElementById('coffee-button').addEventListener('click', webController(coffee()));
-//document.getElementById('book-button').addEventListener('click', webController(bookTable()));
+document.body.appendChild(header());
+document.body.appendChild(content(bakery()));
+document.body.appendChild(footer());
 
 
 
