@@ -13,40 +13,31 @@ body {
     font-family: Roboto, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     background: black;
 }
 
 header {
-    height: 19vh;
+    height: 18vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding-bottom: 5px;
 }
 
 nav {
     height: 5vh;
 }
 
-#content, #content2 {
+#content {
     background: #202020;
-    height: 80vh
+    max-height: 79vh;
 }
 
-#content2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
 #bakery-main {
     background-position: center;
     background-image: url("./img/dough-hands.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 80vh;
 }
 
 #coffee-main {
@@ -54,7 +45,6 @@ nav {
     background-image: url("./img/coffee.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 80vh;
 }
 
 #book-main {
@@ -62,15 +52,19 @@ nav {
     background-image: url("./img/bread-display.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 80vh;
 }
+
 
 footer {
     color: white;
     background: black;
-    height: 1vh;
+    margin-top: 5px;
+    min-height: 2vh;
     text-align: center;
-    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
@@ -123,6 +117,7 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 80vh;
 }
 
 .message {
@@ -135,7 +130,7 @@ button:hover {
 }
 
 #logo {
-    margin: 20px auto 0 auto;
+    margin: 15px auto 0 auto;
     display: block;
     max-width: 25vw; /*500px;*/
     max-height: 13vh;/*210px;*/
@@ -169,7 +164,7 @@ p {
     font-size: 2.5vh;
 }
 
-#guest-name, #guest-phone, #date, #guests-number, #book-button {
+#guest-name, #guest-phone, #date, #guests-number, #book-form-button {
     width: 15vw;
     height: 3vh;
 }
