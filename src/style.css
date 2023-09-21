@@ -30,6 +30,8 @@ nav {
 #content {
     background: #202020;
     max-height: 79vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
